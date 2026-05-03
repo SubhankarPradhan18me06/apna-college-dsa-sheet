@@ -12,8 +12,8 @@ const chapters = [
   { title: 'Stack', description: 'LIFO data structure for bracket matching and monotonic problems.', icon: '⊞', order: 4 },
   { title: 'Binary Search', description: 'Divide and conquer on sorted data for O(log n) solutions.', icon: '⌕', order: 5 },
   { title: 'Linked Lists', description: 'Dynamic linear data structure with pointer-based traversal.', icon: '⛓', order: 6 },
-  { title: 'Trees', description: 'Hierarchical structures — BST, traversals, and LCA problems.', icon: '🌲', order: 7 },
-  { title: 'Dynamic Programming', description: 'Solve complex problems by breaking into overlapping subproblems.', icon: '⚡', order: 8 },
+  { title: 'Trees', description: 'Hierarchical structures — BST, traversals, and LCA problems.', icon: 'tree', order: 7 },
+  { title: 'Dynamic Programming', description: 'Solve complex problems by breaking into overlapping subproblems.', icon: 'code', order: 8 },
 ];
 
 const problemsData = [
@@ -72,15 +72,15 @@ const problemsData = [
 
 async function seed() {
   await mongoose.connect(process.env.MONGO_URI as string);
-  console.log('🔗 Connected to MongoDB');
+  console.log('Connected to MongoDB');
 
   await Progress.deleteMany({});
   await Problem.deleteMany({});
   await Chapter.deleteMany({});
-  console.log('🗑️  Cleared existing data');
+  console.log('Cleared existing data');
 
   const createdChapters = await Chapter.insertMany(chapters);
-  console.log(`✅ Created ${createdChapters.length} chapters`);
+  console.log(`Created ${createdChapters.length} chapters`);
 
   const problems = problemsData.map((p) => ({
     title: p.title,
@@ -94,14 +94,14 @@ async function seed() {
   }));
 
   const createdProblems = await Problem.insertMany(problems);
-  console.log(`✅ Created ${createdProblems.length} problems`);
+  console.log(`Created ${createdProblems.length} problems`);
 
   await mongoose.disconnect();
-  console.log('🎉 Seed complete!');
+  console.log('Seed complete');
   process.exit(0);
 }
 
 seed().catch((err) => {
-  console.error('❌ Seed failed:', err);
+  console.error('Seed failed:', err);
   process.exit(1);
 });

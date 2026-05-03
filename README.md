@@ -1,8 +1,8 @@
-# 🚀 DSA Practice Sheet — Backend Engine
+# DSA Practice Sheet — Backend Engine
 
 A production-grade GraphQL API for tracking Data Structures & Algorithms progress. Built with a focus on scalability, security, and developer experience.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Runtime**: Node.js
 - **Framework**: Express.js
@@ -11,7 +11,7 @@ A production-grade GraphQL API for tracking Data Structures & Algorithms progres
 - **Auth**: JWT with httpOnly Cookies
 - **Language**: TypeScript
 
-## 🏗 Architecture
+## Architecture
 
 The project follows a feature-based resolver structure for the GraphQL API:
 
@@ -26,13 +26,13 @@ src/
 └── utils/           # Helper functions and seeding scripts
 ```
 
-## 🔐 Security Features
+## Security Features
 
 - **httpOnly Cookies**: JWT tokens are stored in secure cookies to prevent XSS attacks.
 - **Password Hashing**: Bcrypt with 12 salt rounds for secure credential storage.
 - **GraphQL Context**: User sessions are injected into the GraphQL context for per-request authorization.
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
