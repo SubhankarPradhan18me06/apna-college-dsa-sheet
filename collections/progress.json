@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "69f77dc81e983617a8822e7d",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf68",
+    "completed": true,
+    "createdAt": "2026-05-03T16:54:32.754Z",
+    "updatedAt": "2026-05-03T16:59:43.150Z",
+    "__v": 0,
+    "completedAt": "2026-05-03T16:59:43.150Z"
+  },
+  {
+    "_id": "69f77dca1e983617a8822e7e",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf67",
+    "completed": true,
+    "createdAt": "2026-05-03T16:54:34.159Z",
+    "updatedAt": "2026-05-03T16:57:29.188Z",
+    "__v": 0,
+    "completedAt": "2026-05-03T16:57:29.188Z"
+  },
+  {
+    "_id": "69f77dcc1e983617a8822e7f",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf69",
+    "completed": true,
+    "completedAt": "2026-05-03T16:54:36.952Z",
+    "createdAt": "2026-05-03T16:54:36.953Z",
+    "updatedAt": "2026-05-03T16:54:36.953Z",
+    "__v": 0
+  },
+  {
+    "_id": "69f77dce1e983617a8822e80",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf6a",
+    "completed": true,
+    "completedAt": "2026-05-03T16:54:38.178Z",
+    "createdAt": "2026-05-03T16:54:38.179Z",
+    "updatedAt": "2026-05-03T16:54:38.179Z",
+    "__v": 0
+  },
+  {
+    "_id": "69f77dd01e983617a8822e81",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf6b",
+    "completed": true,
+    "completedAt": "2026-05-03T16:54:40.116Z",
+    "createdAt": "2026-05-03T16:54:40.117Z",
+    "updatedAt": "2026-05-03T16:54:40.117Z",
+    "__v": 0
+  },
+  {
+    "_id": "69f77dd11e983617a8822e82",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf6c",
+    "completed": true,
+    "completedAt": "2026-05-03T16:54:41.614Z",
+    "createdAt": "2026-05-03T16:54:41.614Z",
+    "updatedAt": "2026-05-03T16:54:41.614Z",
+    "__v": 0
+  },
+  {
+    "_id": "69f77e6f1e983617a8822e83",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf6f",
+    "completed": false,
+    "createdAt": "2026-05-03T16:57:19.914Z",
+    "updatedAt": "2026-05-03T16:57:20.754Z",
+    "__v": 0
+  },
+  {
+    "_id": "69f77e7f1e983617a8822e84",
+    "userId": "69f77dbf1e983617a8822e7c",
+    "problemId": "69f77be3709455a95911bf6d",
+    "completed": false,
+    "createdAt": "2026-05-03T16:57:35.940Z",
+    "updatedAt": "2026-05-03T16:57:36.776Z",
+    "__v": 0
+  }
+]

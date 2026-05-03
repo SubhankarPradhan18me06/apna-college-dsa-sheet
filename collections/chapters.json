@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "69f77be3709455a95911bf5f",
+    "title": "Arrays & Hashing",
+    "description": "Fundamental data structures essential for optimal time complexity.",
+    "icon": "{}",
+    "order": 1,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.805Z",
+    "updatedAt": "2026-05-03T16:46:27.805Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf60",
+    "title": "Two Pointers",
+    "description": "Efficient technique using two indices to traverse arrays.",
+    "icon": "↔",
+    "order": 2,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.806Z",
+    "updatedAt": "2026-05-03T16:46:27.806Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf61",
+    "title": "Sliding Window",
+    "description": "Optimize subarray/substring problems with a moving window.",
+    "icon": "▬",
+    "order": 3,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.806Z",
+    "updatedAt": "2026-05-03T16:46:27.806Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf62",
+    "title": "Stack",
+    "description": "LIFO data structure for bracket matching and monotonic problems.",
+    "icon": "⊞",
+    "order": 4,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.806Z",
+    "updatedAt": "2026-05-03T16:46:27.806Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf63",
+    "title": "Binary Search",
+    "description": "Divide and conquer on sorted data for O(log n) solutions.",
+    "icon": "⌕",
+    "order": 5,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.807Z",
+    "updatedAt": "2026-05-03T16:46:27.807Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf64",
+    "title": "Linked Lists",
+    "description": "Dynamic linear data structure with pointer-based traversal.",
+    "icon": "⛓",
+    "order": 6,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.807Z",
+    "updatedAt": "2026-05-03T16:46:27.807Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf65",
+    "title": "Trees",
+    "description": "Hierarchical structures — BST, traversals, and LCA problems.",
+    "icon": "🌲",
+    "order": 7,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.807Z",
+    "updatedAt": "2026-05-03T16:46:27.807Z"
+  },
+  {
+    "_id": "69f77be3709455a95911bf66",
+    "title": "Dynamic Programming",
+    "description": "Solve complex problems by breaking into overlapping subproblems.",
+    "icon": "⚡",
+    "order": 8,
+    "__v": 0,
+    "createdAt": "2026-05-03T16:46:27.807Z",
+    "updatedAt": "2026-05-03T16:46:27.807Z"
+  }
+]
