@@ -59,16 +59,16 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-dark-900 flex">
+    <div className="min-h-screen bg-white dark:bg-dark-900 flex transition-colors duration-300">
       {/* Left Panel */}
-      <div className="hidden lg:flex flex-col justify-between flex-1 p-12 bg-dark-800 relative overflow-hidden">
+      <div className="hidden lg:flex flex-col justify-between flex-1 p-12 bg-gray-50 dark:bg-dark-800 relative overflow-hidden transition-colors duration-300">
         <div className="absolute inset-0 bg-orange-radial pointer-events-none" />
         <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
         <div className="relative">
           <h1 className="text-2xl font-bold text-gradient">Apna College</h1>
         </div>
         <div className="relative">
-          <blockquote className="text-4xl font-bold text-white leading-tight mb-6">
+          <blockquote className="text-4xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
             "First, solve the problem.<br />Then, write the code."
           </blockquote>
           <div className="w-1 h-16 bg-brand-orange rounded-full mb-4" />
@@ -92,8 +92,8 @@ const LoginPage: React.FC = () => {
       <div className="flex flex-1 items-center justify-center px-8 py-12">
         <div className="w-full max-w-md">
           <div className="card p-8">
-            <h2 className="text-2xl font-bold text-center text-white mb-1">Welcome Back</h2>
-            <p className="text-center text-gray-400 text-sm mb-6">Enter your credentials to access your dashboard.</p>
+            <h2 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-1">Welcome Back</h2>
+            <p className="text-center text-gray-500 dark:text-gray-400 text-sm mb-6">Enter your credentials to access your dashboard.</p>
 
             {/* Tabs */}
             <div className="flex rounded-lg border border-surface-border mb-6 p-1 gap-1">

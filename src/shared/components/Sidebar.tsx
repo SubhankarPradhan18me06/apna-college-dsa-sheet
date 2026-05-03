@@ -25,7 +25,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-52 bg-dark-800 border-r border-surface-border flex flex-col z-30">
+    <aside className="fixed left-0 top-0 h-screen w-52 bg-bg-card border-r border-surface-border flex flex-col z-30 transition-colors duration-300">
       {/* Logo */}
       <div className="px-5 py-5 border-b border-surface-border">
         <h1 className="text-xl font-bold text-gradient">Apna College</h1>
@@ -44,7 +44,7 @@ const Sidebar: React.FC = () => {
             }
           >
             <span className="text-lg w-5 text-center">{item.icon}</span>
-            <span className="text-sm font-medium uppercase tracking-wider">{item.label}</span>
+            <span className="text-sm font-medium uppercase tracking-wider text-secondary dark:text-gray-400 group-hover:text-primary transition-colors">{item.label}</span>
           </NavLink>
         ))}
       </nav>
@@ -56,8 +56,8 @@ const Sidebar: React.FC = () => {
             {user?.name?.charAt(0).toUpperCase() || 'U'}
           </div>
           <div className="min-w-0 flex-1">
-            <p className="text-sm font-semibold text-gray-100 truncate">{user?.name || 'Student'}</p>
-            <p className="text-xs text-gray-500 truncate">{user?.role || 'Student'}</p>
+            <p className="text-sm font-semibold text-primary truncate">{user?.name || 'Student'}</p>
+            <p className="text-xs text-secondary truncate">{user?.role || 'Student'}</p>
           </div>
           <button
             onClick={handleLogout}

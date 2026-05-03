@@ -6,6 +6,7 @@ import Sidebar from './shared/components/Sidebar';
 import TopBar, { TopBarSearch, TopBarActions } from './shared/components/TopBar';
 import ProtectedRoute from './shared/components/ProtectedRoute';
 import Spinner from './shared/components/Spinner';
+import ThemeWatcher from './shared/components/ThemeWatcher';
 
 // Lazy load pages
 const LoginPage = lazy(() => import('./features/auth/LoginPage'));
@@ -15,7 +16,8 @@ const ChapterDetailPage = lazy(() => import('./features/chapters/ChapterDetailPa
 const ProfilePage = lazy(() => import('./features/profile/ProfilePage'));
 
 const Layout = () => (
-  <div className="flex min-h-screen bg-dark-900">
+  <div className="flex min-h-screen bg-bg-main transition-colors duration-300">
+    <ThemeWatcher />
     <Sidebar />
     <main className="flex-1 ml-52 min-h-screen flex flex-col">
       <TopBar>
@@ -38,7 +40,8 @@ const App: React.FC = () => {
         <Routes>
           {/* Public Routes */}
           <Route path="/login" element={
-            <Suspense fallback={<div className="min-h-screen bg-dark-900 flex items-center justify-center"><Spinner size="lg" /></div>}>
+            <Suspense fallback={<div className="min-h-screen bg-white dark:bg-dark-900 flex items-center justify-center"><Spinner size="lg" /></div>}>
+              <ThemeWatcher />
               <LoginPage />
             </Suspense>
           } />
@@ -49,7 +52,7 @@ const App: React.FC = () => {
             <Route path="/topics" element={<TopicsPage />} />
             <Route path="/topics/:id" element={<ChapterDetailPage />} />
             <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/bookmarks" element={<div className="p-8"><h1 className="text-2xl text-white">Bookmarks Coming Soon...</h1></div>} />
+            <Route path="/bookmarks" element={<div className="p-8 text-primary font-bold text-2xl">Bookmarks Coming Soon...</div>} />
           </Route>
 
           {/* Fallback */}

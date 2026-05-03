@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -22,6 +23,13 @@ export default {
           raised: '#1E2235',
           border: '#2A2F45',
         },
+        // Theme variables
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        dim: 'var(--text-dim)',
+        'bg-main': 'var(--bg-primary)',
+        'bg-card': 'var(--bg-secondary)',
+        'bg-alt': 'var(--bg-tertiary)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -5,9 +5,12 @@ import Spinner from '../../shared/components/Spinner';
 import ProgressRing from '../../shared/components/ProgressRing';
 import ProblemRow from '../problems/ProblemRow';
 import type { Chapter } from '@/shared/types';
+import { useAuthStore } from '../../store/useAuthStore';
 
 const DashboardPage: React.FC = () => {
+  const { user } = useAuthStore();
   const { data: chaptersData, loading: chaptersLoading } = useQuery(GET_CHAPTERS);
+  // ... rest of state
   const { data: statsData, loading: statsLoading } = useQuery(GET_STATS);
   const [expandedChapter, setExpandedChapter] = useState<string | null>(null);
 
@@ -24,12 +27,17 @@ const DashboardPage: React.FC = () => {
 
   return (
     <div className="p-8 max-w-6xl mx-auto animate-fade-in">
+      <div className="mb-6">
+        <h2 className="text-sm font-bold text-brand-orange uppercase tracking-[0.2em] mb-1">Welcome back,</h2>
+        <h1 className="text-4xl font-black text-primary">{user?.name || 'Student'} 👋</h1>
+      </div>
+
       {/* Hero Section */}
       <section className="card p-8 mb-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-orange-radial pointer-events-none" />
         <div className="relative flex items-center justify-between">
           <div className="max-w-xl">
-            <h1 className="text-3xl font-bold text-white mb-2">Most Important Interview Questions</h1>
+            <h1 className="text-3xl font-bold text-primary mb-2">Most Important Interview Questions</h1>
             <p className="text-gray-400 mb-6">
               Master the core patterns. Your progress is tracking consistently. Maintain your streak to unlock advanced modules.
             </p>
@@ -54,21 +62,21 @@ const DashboardPage: React.FC = () => {
       </section>
 
       {/* Chapters Section */}
-      <h2 className="text-xl font-bold text-white mb-6">Data Structures & Algorithms</h2>
+      <h2 className="text-xl font-bold text-primary mb-6">Data Structures & Algorithms</h2>
       <div className="space-y-4">
         {chapters.map((chapter: Chapter) => (
           <div key={chapter.id} className="card overflow-hidden">
             <button
               onClick={() => setExpandedChapter(expandedChapter === chapter.id ? null : chapter.id)}
-              className="w-full flex items-center justify-between p-5 hover:bg-dark-700/30 transition-colors text-left"
+              className="w-full flex items-center justify-between p-5 hover:bg-tertiary transition-colors text-left"
             >
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-dark-700 border border-surface-border flex items-center justify-center text-xl text-brand-orange">
+                <div className="w-10 h-10 rounded-lg bg-tertiary border border-surface-border flex items-center justify-center text-xl text-brand-orange">
                   {chapter.icon}
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-100">{chapter.title}</h3>
-                  <p className="text-xs text-gray-500">{chapter.totalProblems} Problems</p>
+                  <h3 className="font-bold text-primary">{chapter.title}</h3>
+                  <p className="text-xs text-secondary">{chapter.totalProblems} Problems</p>
                 </div>
               </div>
               
@@ -91,7 +99,7 @@ const DashboardPage: React.FC = () => {
             </button>
             
             {expandedChapter === chapter.id && (
-              <div className="bg-dark-800/50 border-t border-surface-border animate-slide-down">
+              <div className="bg-secondary border-t border-surface-border animate-slide-down">
                 {chapter.problems.map((problem) => (
                   <ProblemRow key={problem.id} problem={problem} />
                 ))}

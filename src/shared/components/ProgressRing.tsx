@@ -37,7 +37,7 @@ const ProgressRing: React.FC<Props> = ({ percentage, size = 100, strokeWidth = 8
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-lg font-bold text-white">{percentage}%</span>
+        <span className="text-lg font-bold text-primary">{percentage}%</span>
         {label && <span className="text-[10px] text-gray-400 uppercase tracking-wider">{label}</span>}
       </div>
     </div>

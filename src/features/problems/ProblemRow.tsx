@@ -40,42 +40,47 @@ const ProblemRow: React.FC<Props> = ({ problem }) => {
   });
 
   return (
-    <div className={`flex items-center gap-4 py-3 px-4 hover:bg-dark-700/50 transition-colors border-b border-surface-border last:border-0 ${problem.completed ? 'opacity-80' : ''}`}>
-      <div className="flex-shrink-0">
+    <div className={`grid grid-cols-[48px_40px_1fr_100px_120px] gap-4 items-center py-3 px-4 hover:bg-bg-alt/50 transition-colors border-b border-surface-border last:border-0 ${problem.completed ? 'opacity-80' : ''}`}>
+      {/* Status */}
+      <div className="flex justify-center">
         <button
           onClick={() => toggleProgress()}
           disabled={loading}
           className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
             problem.completed 
               ? 'bg-emerald-500 border-emerald-500 text-white' 
-              : 'border-dark-400 hover:border-brand-orange'
+              : 'border-dim hover:border-brand-orange'
           }`}
         >
           {problem.completed && <span className="text-[10px]">✓</span>}
         </button>
       </div>
       
-      <div className="flex-shrink-0 w-8 text-xs text-gray-500 font-mono">
+      {/* Number */}
+      <div className="text-xs text-secondary font-mono">
         {problem.number}.
       </div>
       
-      <div className="flex-1 min-w-0">
-        <h4 className={`text-sm font-medium truncate ${problem.completed ? 'text-gray-400 line-through' : 'text-gray-200'}`}>
+      {/* Title */}
+      <div className="min-w-0">
+        <h4 className={`text-sm font-medium truncate ${problem.completed ? 'text-secondary line-through' : 'text-primary'}`}>
           {problem.title}
         </h4>
       </div>
       
-      <div className="flex-shrink-0">
+      {/* Difficulty */}
+      <div className="flex justify-center">
         <DifficultyBadge difficulty={problem.difficulty} />
       </div>
       
-      <div className="flex items-center gap-3 ml-4">
+      {/* Solutions */}
+      <div className="flex items-center justify-end gap-3 pr-4">
         {problem.youtubeUrl && (
           <a
             href={problem.youtubeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-red-500 transition-colors"
+            className="text-secondary hover:text-red-500 transition-colors"
             title="Video Tutorial"
           >
             ▶
@@ -86,7 +91,7 @@ const ProblemRow: React.FC<Props> = ({ problem }) => {
             href={problem.leetcodeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-brand-orange transition-colors"
+            className="text-secondary hover:text-brand-orange transition-colors"
             title="LeetCode Problem"
           >
             &lt;/&gt;
@@ -97,7 +102,7 @@ const ProblemRow: React.FC<Props> = ({ problem }) => {
             href={problem.articleUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-blue-400 transition-colors"
+            className="text-secondary hover:text-blue-400 transition-colors"
             title="Article Reference"
           >
             📄
