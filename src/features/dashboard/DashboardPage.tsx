@@ -4,7 +4,7 @@ import { GET_CHAPTERS, GET_STATS } from '../../graphql/queries';
 import Spinner from '../../shared/components/Spinner';
 import ProgressRing from '../../shared/components/ProgressRing';
 import ProblemRow from '../problems/ProblemRow';
-import type { Chapter } from '../../shared/types';
+import type { Chapter } from '@/shared/types';
 
 const DashboardPage: React.FC = () => {
   const { data: chaptersData, loading: chaptersLoading } = useQuery(GET_CHAPTERS);

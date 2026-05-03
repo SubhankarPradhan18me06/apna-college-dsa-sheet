@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/client';
 import { TOGGLE_PROGRESS } from '../../graphql/mutations';
 import { GET_CHAPTERS, GET_STATS } from '../../graphql/queries';
 import DifficultyBadge from '../../shared/components/DifficultyBadge';
-import type { Problem } from '../../shared/types';
+import type { Problem } from '@/shared/types';
 
 interface Props {
   problem: Problem;

@@ -9,7 +9,7 @@ export default defineConfig({
       '/graphql': {
         target: 'http://localhost:4000',
         changeOrigin: true,
-        credentials: true,
+        // credentials: true,
       },
     },
   },

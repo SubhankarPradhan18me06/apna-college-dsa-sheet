@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CHAPTERS } from '../../graphql/queries';
 import Spinner from '../../shared/components/Spinner';
-import type { Chapter as ChapterType } from '../../shared/types';
+import type { Chapter as ChapterType } from '@/shared/types';
 import { Link } from 'react-router-dom';
 
 const TopicsPage: React.FC = () => {
