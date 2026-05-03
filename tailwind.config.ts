@@ -21,7 +21,7 @@ export default {
         surface: {
           DEFAULT: '#181B26',
           raised: '#1E2235',
-          border: '#2A2F45',
+          border: 'var(--border-color)',
         },
         // Theme variables
         primary: 'var(--text-primary)',

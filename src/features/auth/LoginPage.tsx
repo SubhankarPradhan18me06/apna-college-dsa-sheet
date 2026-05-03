@@ -101,9 +101,8 @@ const LoginPage: React.FC = () => {
                 <button
                   key={t}
                   onClick={() => { setTab(t); setServerError(''); }}
-                  className={`flex-1 py-2 text-sm font-semibold rounded-md uppercase tracking-wider transition-all ${
-                    tab === t ? 'bg-brand-orange text-white' : 'text-gray-400 hover:text-gray-200'
-                  }`}
+                  className={`flex-1 py-2 text-sm font-semibold rounded-md uppercase tracking-wider transition-all ${tab === t ? 'bg-brand-orange text-white' : 'text-gray-400 hover:text-gray-200'
+                    }`}
                 >
                   {t}
                 </button>
@@ -181,7 +180,7 @@ const LoginPage: React.FC = () => {
                     {...registerForm.register('name')}
                     id="register-name"
                     type="text"
-                    placeholder="Alex Chen"
+                    placeholder="Subhankar Pradhan"
                     className="input-field"
                   />
                   {registerForm.formState.errors.name && (

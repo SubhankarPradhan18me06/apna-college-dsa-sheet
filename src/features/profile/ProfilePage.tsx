@@ -99,7 +99,11 @@ const ProfilePage: React.FC = () => {
           {/* Streak & Rank Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="card p-6 flex items-center justify-between relative overflow-hidden">
-              <div className="absolute right-0 top-0 text-brand-orange/10 text-8xl font-black rotate-12 select-none">🔥</div>
+              <div className="absolute right-2 top-2 text-brand-orange/10 select-none">
+                <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.66 11.57c-.2-.07-.4-.15-.6-.24-.9-.4-1.83-.8-2.82-1.2C12.16 9.32 11 8.2 11 7c0-2.31 1.76-4.22 4-4.5V2c-2.76 0-5 2.24-5 5v1c0 1.1-.9 2-2 2h-1c-1.1 0-2 .9-2 2v1c0 1.1.9 2 2 2h1c1.1 0 2-.9 2-2v-1c0-1.1.9-2 2-2h1c1.1 0 2 .9 2 2v5c0 1.1.9 2 2 2h1c1.1 0 2-.9 2-2v-3c0-1.1-.9-2-2-2h-1c-1.1 0-2 .9-2 2v1c0 1.1-.9 2-2 2h-1c-1.1 0-2-.9-2-2V11c0-1.1.9-2 2-2h1c1.1 0 2 .9 2 2v.57z" />
+                </svg>
+              </div>
               <div>
                 <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Current Streak</h3>
                 <p className="text-5xl font-black text-brand-orange mb-1">42 <span className="text-lg font-bold text-gray-500 uppercase tracking-widest">Days</span></p>
@@ -108,7 +112,11 @@ const ProfilePage: React.FC = () => {
             </div>
 
             <div className="card p-6 flex items-center justify-between relative overflow-hidden">
-              <div className="absolute right-0 top-0 text-brand-orange/10 text-8xl font-black rotate-12 select-none">🏆</div>
+              <div className="absolute right-2 top-2 text-brand-orange/10 select-none">
+                <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18 2H6c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0011 14v4H7v2h10v-2h-4v-4c2.02 0 3.73-1.33 4.31-3.14 2.4-.35 4.31-2.43 4.69-4.86V4c0-1.1-.9-2-2-2zM6 7V4h2v3c0 .55-.45 1-1 1s-1-.45-1-1zm12 0c0 .55-.45 1-1 1s-1-.45-1-1V4h2v3z" />
+                </svg>
+              </div>
               <div>
                 <h3 className="text-sm font-bold text-primary uppercase tracking-widest mb-4">Mastery Score</h3>
                 <p className="text-5xl font-black text-primary mb-1">{stats?.percentage || 0}%</p>

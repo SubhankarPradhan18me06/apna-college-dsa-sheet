@@ -29,7 +29,7 @@ const DashboardPage: React.FC = () => {
     <div className="p-8 max-w-6xl mx-auto animate-fade-in">
       <div className="mb-6">
         <h2 className="text-sm font-bold text-brand-orange uppercase tracking-[0.2em] mb-1">Welcome back,</h2>
-        <h1 className="text-4xl font-black text-primary">{user?.name || 'Student'} 👋</h1>
+        <h1 className="text-4xl font-black text-primary">{user?.name || 'Student'}</h1>
       </div>
 
       {/* Hero Section */}
@@ -99,7 +99,7 @@ const DashboardPage: React.FC = () => {
             </button>
             
             {expandedChapter === chapter.id && (
-              <div className="bg-secondary border-t border-surface-border animate-slide-down">
+              <div className="bg-bg-alt border-t border-surface-border animate-slide-down">
                 {chapter.problems.map((problem) => (
                   <ProblemRow key={problem.id} problem={problem} />
                 ))}
