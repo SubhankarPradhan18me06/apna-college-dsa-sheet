@@ -31,9 +31,9 @@ COPY --from=builder /app/dist ./dist
 
 # Environment variables (Defaults, should be overridden by .env)
 ENV PORT=4000
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 
 EXPOSE 4000
 
 # Run the app
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]   
