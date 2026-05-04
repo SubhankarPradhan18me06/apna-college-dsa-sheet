@@ -1,5 +1,5 @@
-# Use Node 18 slim for a small footprint
-FROM node:18-slim as builder
+# Use Node 20 slim for a small footprint
+FROM node:20-slim AS builder
 
 WORKDIR /app
 
@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install all dependencies (including dev for build)
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -16,7 +16,7 @@ COPY . .
 RUN npm run build
 
 # --- Production Stage ---
-FROM node:18-slim
+FROM node:20-slim
 
 WORKDIR /app
 
@@ -24,16 +24,16 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install ONLY production dependencies
-RUN npm install --production
+RUN npm install --omit=dev --legacy-peer-deps
 
 # Copy built assets from builder stage
 COPY --from=builder /app/dist ./dist
 
 # Environment variables (Defaults, should be overridden by .env)
 ENV PORT=4000
-ENV NODE_ENV=development
+ENV NODE_ENV=production
 
 EXPOSE 4000
 
 # Run the app
-CMD ["npm", "run", "dev"]   
+CMD ["npm", "start"]
